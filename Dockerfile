@@ -11,9 +11,9 @@ RUN pwsh -command "install-module -name MicrosoftTeams -requiredversion 1.1.3-pr
                 && install-module -name ipphones -scope allusers -force -verbose"
                 
 COPY profile.ps1 /home/.config/powershell/profile.ps1
-COPY TeamsTools/LICENSE.txt /home/.config/powershell/modules/teamstools/license.txt
-COPY teamstools/teamstools.psd1 /home/.config/powershell/modules/teamstools/teamstools.psd1
-COPY teamstools/teamstools.psm1 /home/.config/powershell/modules/teamstools/teamstools.psm1
+COPY /TeamsTools/LICENSE.txt /home/.config/powershell/modules/teamstools/license.txt
+COPY /TeamsTools/teamstools.psd1 /home/.config/powershell/modules/teamstools/teamstools.psd1
+COPY /TeamsTools/teamstools.psm1 /home/.config/powershell/modules/teamstools/teamstools.psm1
 
 ENV HOME /home
 
