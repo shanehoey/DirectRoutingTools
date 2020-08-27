@@ -6,6 +6,7 @@ LABEL   Maintainer = "Shane Hoey" \
 
 RUN pwsh -command "install-module -name MicrosoftTeams -requiredversion 1.1.3-preview -scope allusers -allowprerelease -force -verbose \
                 && install-module -name az -scope allusers -force -verbose \
+                && install-module -name Microsoft.Graph -scope allusers -force -verbose \
                 && install-module -name mediant -scope allusers -force -verbose \
                 && install-module -name ipphones -scope allusers -force -verbose "
 
