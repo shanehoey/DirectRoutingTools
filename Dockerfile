@@ -7,7 +7,7 @@ LABEL   Maintainer = "Shane Hoey" \
 RUN  apt-get update \ 
      && apt-get install -y  unzip
 
-RUN  curl -sSL https://imsreleases.blob.core.windows.net/universal/production/1.4.0/Universal.linux-x64.1.4.0.zip -o /tmp/universal.zip  
+RUN  curl -sSL https://imsreleases.blob.core.windows.net/universal/production/1.4.0/Universal.linux-x64.1.4.0.zip -o /tmp/universal.zip \
      && unzip /tmp/universal.zip -d ./home/Universal \
      && rm /tmp/universal.zip \
      && chmod +x ./home/Universal/Universal.Server
