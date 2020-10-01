@@ -13,8 +13,8 @@ RUN pwsh -command "install-module -name MicrosoftTeams -scope allusers -force -v
                 
 COPY profile.ps1 /home/.config/powershell/profile.ps1
 COPY /TeamsTools/LICENSE.txt /home/.config/powershell/modules/teamstools/license.txt
-COPY /TeamsTools/teamstools.psd1 /home/.config/powershell/modules/teamstools/teamstools.psd1
-COPY /TeamsTools/teamstools.psm1 /home/.config/powershell/modules/teamstools/teamstools.psm1
+COPY /TeamsTools/TeamsTools.psd1 /home/.config/powershell/modules/teamstools/teamstools.psd1
+COPY /TeamsTools/TeamsTools.psm1 /home/.config/powershell/modules/teamstools/teamstools.psm1
 COPY dashboard.ps1 /home/.config/powershell/dashboard.ps1
 
 ENV HOME /home
