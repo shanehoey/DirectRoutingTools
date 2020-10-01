@@ -4,6 +4,16 @@ LABEL   Maintainer = "Shane Hoey" \
         Date = "1/10/2020" \
         Description = "docker container with PowerShell Core and latest modules to manage Teams"
 
+https://imsreleases.blob.core.windows.net/universal/production/1.4.0/Universal.linux-x64.1.4.0.zip 
+
+RUN  apt-get update \ 
+     && apt-get install -y  unzip
+
+RUN  curl -sSL https://imsreleases.blob.core.windows.net/universal/production/1.4.0/Universal.linux-x64.1.4.0.zip -o /tmp/universal.zip  
+     && unzip /tmp/universal.zip -d ./home/Universal \
+     && rm /tmp/universal.zip \
+     && chmod +x ./home/Universal/Universal.Server
+     
 RUN pwsh -command "install-module -name MicrosoftTeams -scope allusers -force -verbose \
                 && install-module -name az -scope allusers -force -verbose \
                 && install-module -name Microsoft.Graph.Authentication -scope allusers -force -verbose \
