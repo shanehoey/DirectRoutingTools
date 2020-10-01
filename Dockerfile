@@ -9,7 +9,7 @@ RUN pwsh -command "install-module -name MicrosoftTeams -scope allusers -force -v
                 && install-module -name Microsoft.Graph.Authentication -scope allusers -force -verbose \
                 && install-module -name mediant -scope allusers -force -verbose \
                 && install-module -name ipphones -scope allusers -force -verbose\
-                && install-module -name UniversalDashboard -scope allusers -force -verbose"
+                && install-module -name Universal -scope allusers -force -verbose"
                 
 COPY profile.ps1 /home/.config/powershell/profile.ps1
 COPY /TeamsTools/LICENSE.txt /home/.config/powershell/modules/teamstools/license.txt
