@@ -4,8 +4,6 @@ LABEL   Maintainer = "Shane Hoey" \
         Date = "1/10/2020" \
         Description = "docker container with PowerShell Core and latest modules to manage Teams"
 
-https://imsreleases.blob.core.windows.net/universal/production/1.4.0/Universal.linux-x64.1.4.0.zip 
-
 RUN  apt-get update \ 
      && apt-get install -y  unzip
 
