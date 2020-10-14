@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/powershell:latest
+FROM mcr.microsoft.com/powershell:lts-nanoserver-2004
 
 LABEL   Maintainer = "Shane Hoey" \
         Date = "1/10/2020" \
